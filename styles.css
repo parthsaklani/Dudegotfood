@@ -1,0 +1,284 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+
+:root {
+    --primary-color: #d70060; 
+    --light-gray: #f7f7f7;
+    --medium-gray: #eeeeee;
+    --dark-gray: #333333;
+    --white: #ffffff;
+    --border-color: #dddddd;
+}
+
+
+body {
+    font-family: 'Roboto', 'Nunito', sans-serif; 
+    font-size: 16px;
+    color: var(--dark-gray);
+    background-color: var(--light-gray);
+    min-height: 100vh; 
+}
+
+h1, h2, h3 {
+    color: var(--dark-gray);
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p {
+    line-height: 1.6; 
+    margin-bottom: 1rem;
+}
+
+img {
+    width: 100%;
+    height: auto; 
+    display: block; 
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 1.5rem;
+}
+
+.container h2{
+    font-size: 2.75rem;
+}
+
+
+header {
+    background-color: var(--white);
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin: 0;
+}
+
+header nav ul {
+    list-style-type: none; 
+    display: flex;
+    gap: 1.5rem;
+}
+
+header nav a {
+    text-decoration: none; 
+    color: var(--dark-gray);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+
+header nav a:hover,
+header nav a:focus {
+    color: var(--primary-color);
+}
+
+
+.restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1.5rem;
+}
+
+
+.card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+    overflow: hidden; 
+}
+
+.card img {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    margin-top: 0;
+}
+
+.card-content a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin-bottom: 1.5rem;
+    background-color: var(--white);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+thead {
+    background-color: var(--medium-gray);
+}
+
+tfoot {
+    font-weight: bold;
+}
+
+
+button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    
+    transition: background-color 0.3s ease;
+}
+
+button:hover, button:focus {
+    background-color: #a7004a; 
+}
+
+
+form {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+fieldset {
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 0 0.5rem;
+    margin-left: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: whitesmoke;
+    border-top: 1px solid var(--border-color);
+    margin-top: 0;
+    background-color: black;
+}
+
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 2rem 0;
+}
+
+#hero {
+    background-image: url('https://placehold.co/1400x450/d70060/ffffff?text=Your+Banner+Image+Here');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    height: 450px; 
+    
+    
+    padding: 0 1.5rem; 
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+.hero-content {
+  
+    background-color: rgba(0, 0, 0, 0.25); 
+    padding: 2rem;
+    border-radius: 8px; 
+}
+
+#hero h2 {
+    
+    color: var(--white);
+    font-size: 3rem; 
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0;
+   
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#hero p {
+    color: var(--white);
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+    display: flex;        
+    align-items: center;  
+    gap: 0.5rem;          
+}
+
+.logo img {
+    height: 50px; 
+    width: 50px;
+}
+
+
+
