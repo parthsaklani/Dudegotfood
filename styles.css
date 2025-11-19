@@ -5,6 +5,10 @@
     box-sizing: border-box; 
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 
 :root {
     --primary-color: #d70060; 
@@ -84,6 +88,7 @@ header nav a {
     color: var(--dark-gray);
     font-weight: bold;
     font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
 
@@ -106,8 +111,16 @@ header nav a:focus {
     border-radius: 8px; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
     overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
 .card img {
     border-bottom: 1px solid var(--border-color);
 }
@@ -209,12 +222,83 @@ textarea {
 
 
 footer {
-    text-align: center;
-    padding: 1.5rem;
-    color: whitesmoke;
-    border-top: 1px solid var(--border-color);
+    background-color: #000; 
+    color: #ccc; 
+    padding-top: 3rem;
     margin-top: 0;
-    background-color: black;
+    border-top: none; 
+}
+
+
+.footer-top {
+    margin-bottom: 2rem;
+}
+
+
+footer .logo h1 {
+    color: var(--primary-color);
+}
+
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 3rem;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+}
+
+.footer-column h3 {
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style-type: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul a:hover {
+    color: var(--primary-color);
+}
+ 
+.footer-bottom {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    text-align: left; 
+    padding: 1.5rem 0;
+    border-top: 1px solid #333; 
+    color: #ccc;
+}
+
+.footer-bottom p {
+    margin: 0; 
+}
+
+.footer-bottom a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: var(--primary-color);
+}
+
+#overview h2 {
+    font-size: 2.5rem; 
+    line-height: 1.4;
 }
 
 
@@ -226,12 +310,12 @@ hr {
 }
 
 #hero {
-    background-image: url('https://placehold.co/1400x450/d70060/ffffff?text=Your+Banner+Image+Here');
+    background-image: url('imgs/banner.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     
-    height: 450px; 
+    height: 600px; 
     
     
     padding: 0 1.5rem; 
@@ -245,9 +329,12 @@ hr {
 
 .hero-content {
   
-    background-color: rgba(0, 0, 0, 0.25); 
+    background-color: rgba(0, 0, 0, 0.05); 
     padding: 2rem;
     border-radius: 8px; 
+    margin-top: 40vh;
+    margin-left: 10vw;
+    animation: fadeInUp 1s ease-out;
 }
 
 #hero h2 {
@@ -280,5 +367,13 @@ hr {
     width: 50px;
 }
 
-
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); 
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
 
