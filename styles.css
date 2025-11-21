@@ -334,7 +334,7 @@ hr {
     border-radius: 8px; 
     margin-top: 40vh;
     margin-left: 10vw;
-    animation: fadeInUp 1s ease-out;
+    animation: fadeInUp 3s ease-out;
 }
 
 #hero h2 {
