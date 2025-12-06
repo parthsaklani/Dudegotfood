@@ -483,21 +483,5 @@ hr {
     }
 }
 
-.dark-mode {
-    background-color: #111 ;
-    color: #fff ;
-}
-
-.dark-mode header,
-.dark-mode footer,
-.dark-mode table,
-.dark-mode form {
-    background-color: #222 ;
-    color: #fff ;
-}
-
-.dark-mode a {
-    color: #ff69b4 ;
-}
 
 
