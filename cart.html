@@ -12,88 +12,86 @@
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="imgs/G.png" alt="Dudegotfood Logo">
-            <h1>Dudegotfood</h1>
-        </div>
-        <nav aria-label="primary-navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="restaurants.html">Restaurants</a></li>
-                <li><a href="about.html">About Us</a></li> 
-                <li><a href="cart.html">My Cart</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <div class="logo">
+        <img src="imgs/G.png" alt="Dudegotfood Logo">
+        <h1>Dudegotfood</h1>
+    </div>
+    <nav aria-label="primary-navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="about.html">About Us</a></li> 
+            <li><a href="cart.html">My Cart</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            
+        </ul>
+    </nav>
+</header>
 
-    <main class="container">
-        <h2>Your Order Summary</h2>
-        
-        <!-- This table will be styled by the CSS file -->
-        <table>
-            <caption>Items in your cart</caption>
-            <thead>
-                <tr>
-                    <th scope="col">Item</th>
-                    <th scope="col">Restaurant</th>
-                    <th scope="col">Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <th scope="row" colspan="2">Total Amount</th>
-                    <td><strong></strong></td>
-                </tr>
-            </tfoot>
-        </table>
+<main class="container">
+    <h2>Your Order Summary</h2>
 
-        <hr>
+    <table>
+        <caption>Items in your cart</caption>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Restaurant</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Total</th>
+            </tr>
+        </thead>
 
-        <section id="checkout">
-            <h2>Checkout</h2>
-            <p>Please provide your details to place the order.</p>
-
-            <form action="https://httpbin.org/get" method="get">
-                <fieldset>
-                    <legend>Delivery Information</legend>
-                    <p>
-                        <label for="name">Name:</label>
-                        <input type="text" name="name" id="name" placeholder="Your Name" required>
-                    </p>
-                    <p>
-                        <label for="address">Address:</label>
-                        <textarea name="address" id="address" cols="30" rows="5" placeholder="Your delivery address" required></textarea>
-                    </p>
-                    <p>
-                        <label for="phone">Phone:</label>
-                        <input type="tel" name="phone" id="phone" placeholder="555-555-5555" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-                    </p>
-                </fieldset>
-                <br>
-                <button type="submit">Place Order</button>
-                <button type="reset">Reset Form</button>
-            </form>
-        </section>
-
-    </main>
+        <tbody>
+            <tr>
+                <td>Chilli Garlic Noodles</td>
+                <td>Haveli</td>
+                <td>₹240</td>
+                <td>
+                    <button id="minus">-</button>
+                    <span id="qty">1</span>
+                    <button id="plus">+</button>
+                </td>
+                <td>₹<span id="total">500</span></td>
+            </tr>
+        </tbody>
+    </table>
 
     <hr>
 
-    <footer>
+    <section id="checkout">
+        <h2>Checkout</h2>
+        <p>Please provide your details to place the order.</p>
+
+        <form action="https://httpbin.org/get" method="get">
+            <fieldset>
+                <legend>Delivery Information</legend>
+                <p>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Your Name" required>
+                </p>
+                <p>
+                    <label for="address">Address:</label>
+                    <textarea id="address" cols="30" rows="5" placeholder="Your delivery address" required></textarea>
+                </p>
+                <p>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" placeholder="555-555-5555">
+                </p>
+            </fieldset>
+            <br>
+            <button type="submit">Place Order</button>
+            <button type="reset">Reset Form</button>
+        </form>
+    </section>
+
+</main>
+
+<hr>
+
+<footer>
     <div class="container">
         
         <div class="footer-top">
@@ -104,13 +102,36 @@
         </div>
 
         <div class="footer-links">
+            
             <div class="footer-column">
                 <h3>Navigate</h3>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Newsroom</a></li>
+                </ul>
             </div>
+
+            <div class="footer-column">
+                <h3>Collaborate</h3>
+                <ul>
+                    <li><a href="#">Explore careers</a></li>
+                    <li><a href="#">Become a rider</a></li>
+                    <li><a href="#">Feed your team</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul class="social-links">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+
         </div>
 
         <div class="footer-bottom">
@@ -121,5 +142,6 @@
     </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
